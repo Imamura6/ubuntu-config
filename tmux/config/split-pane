@@ -1,0 +1,10 @@
+#! /bin/bash
+
+UUID=$(id -u)
+TEMP_PATH="/tmp/tmux-$UUID"
+
+if [ -f "$TEMP_PATH/$(/usr/bin/tmux display-message -p '#W')" ]; then
+    tmux split-window $1 "ssh $(/usr/bin/tmux display-message -p '#W')"
+else
+    tmux split-window $1
+fi

@@ -1,0 +1,33 @@
+#header,
+.button-toolbar.home,
+.button-toolbar.rewind,
+.button-toolbar.next
+{
+    display: none !important;
+}
+/*#browser .tab-position .tab.active {
+  background-color: var(--colorAccentBg);
+}
+#browser .tab-position:hover {
+  background-color: var(--colorAccentBg);
+}
+#browser:not(.ui-transparent-tabs).color-behind-tabs-on .tab-position .tab:hover:not(.active) {
+  background-color: var(--colorAccentBg);
+}*/
+
+/* removes white background from tabs favicon */
+.tab-position .tab.active .tab-header .favicon, #switch .webpanelsgroup button.webviewbtn img
+{
+    background-color: transparent!important;
+    box-shadow: none!important;
+}
+.theme-dark #switch .webviewbtn img {
+    background: transparent !important;
+}
+
+/* removes the address bar from app websites */
+#app .address-top .toolbar.toolbar-addressbar:after {
+{
+    display: none;
+}
+
